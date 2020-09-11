@@ -21,10 +21,10 @@
                     <Flyout>
                         <StackPanel>
                             <TextBlock Text="Clock Size:" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="18" />
-                            <Custom:RadNumericBox x:Name="SimpleClockNumericBox" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Center" Height="25" Value="120" Minimum="2" Maximum="400" />
+                            <Custom:RadNumericBox x:Name="SimpleClockNumericBox" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Center" Height="25" Value="{x:Bind ViewModel.ClockFontSizeDouble, Mode=TwoWay}" Minimum="2" Maximum="400" ValueFormat="{}{000:###pt}" />
                             <MenuFlyoutSeparator Margin="0,10,0,10" />
                             <TextBlock Text="24hr | 12hr" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="18" />
-                            <ToggleSwitch x:Name="SimpleClockDisplayStyleSwitch" Toggled="SimpleClockDisplayStyleSwitch_Toggled" />
+                            <ToggleSwitch x:Name="SimpleClockDisplayStyleSwitch" IsOn="{x:Bind ViewModel.IsTwelveHourFormat, Mode=TwoWay}" />
                             <MenuFlyoutSeparator Margin="0,10,0,10" />
                             <TextBlock x:Name="SimpleClockAboutTextBlock" Text="Sample Text" />
                         </StackPanel>
@@ -33,6 +33,6 @@
             </AppBarButton>
             <AppBarButton Icon="FullScreen" Click="FullScreenButton_Click"/>
         </CommandBar>
-        <TextBlock Text="1:20 PM" VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Height="Auto" Margin="10,10,10,10" FontSize="120" />
+        <TextBlock x:Name="SimpleClockDisplay" Text="1:20 PM" VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Height="Auto" Margin="10,10,10,10" FontSize="{x:Bind ViewModel.ClockFontSize, Mode=OneWay}" />
     </Grid>
 </Page>
