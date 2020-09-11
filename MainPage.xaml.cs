@@ -36,5 +36,15 @@ namespace SimpleClock
         {
 
         }
+
+        private void SimpleClockDisplayStyleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FullScreenButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
