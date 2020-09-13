@@ -28,16 +28,12 @@ namespace SimpleClock
         public MainPageViewModel ViewModel;
         private int clockSize;
         private bool isTwelveHourFormat;
-        private string twelveHourFormat = "hh:mm tt";
-        private string twentyFourHourFormat = "HH:mm";
-        private DispatcherTimer Timer;
 
         public MainPage()
         {
             this.InitializeComponent();
             this.InitializeClockSettings();
             this.ViewModel = new MainPageViewModel(this.clockSize, this.isTwelveHourFormat);
-            this.InitializeClock();
             
         }
 
@@ -56,26 +52,6 @@ namespace SimpleClock
                     ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
                 }
             }
-        }
-
-        private void UpdateClock(object sender, object e)
-        {
-            if (this.ViewModel.IsTwelveHourFormat)
-            {
-                this.SimpleClockDisplay.Text = DateTime.Now.ToString(this.twelveHourFormat);
-            }
-            else
-            {
-                this.SimpleClockDisplay.Text = DateTime.Now.ToString(this.twentyFourHourFormat);
-            }
-        }
-
-        private void InitializeClock()
-        {
-            this.Timer = new DispatcherTimer();
-            Timer.Tick += UpdateClock;
-            Timer.Interval = new TimeSpan(0, 0, 1);
-            Timer.Start();
         }
 
         private void InitializeClockSettings()

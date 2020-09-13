@@ -26,13 +26,13 @@
                             <TextBlock Text="24hr | 12hr" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="18" />
                             <ToggleSwitch x:Name="SimpleClockDisplayStyleSwitch" IsOn="{x:Bind ViewModel.IsTwelveHourFormat, Mode=TwoWay}" />
                             <MenuFlyoutSeparator Margin="0,10,0,10" />
-                            <TextBlock x:Name="SimpleClockAboutTextBlock" Text="Sample Text" />
+                            <TextBlock x:Name="SimpleClockAboutTextBlock" Text="{x:Bind ViewModel.SimpleClockAboutText, Mode=OneWay}" />
                         </StackPanel>
                     </Flyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
             <AppBarButton Icon="FullScreen" Click="FullScreenButton_Click"/>
         </CommandBar>
-        <TextBlock x:Name="SimpleClockDisplay" Text="1:20 PM" VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Height="Auto" Margin="10,10,10,10" FontSize="{x:Bind ViewModel.ClockFontSize, Mode=OneWay}" />
+        <TextBlock x:Name="SimpleClockDisplay" Text="{x:Bind ViewModel.MainPageClock.TimeString, Mode=OneWay}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Height="Auto" Margin="10,10,10,10" FontSize="{x:Bind ViewModel.ClockFontSize, Mode=OneWay}" />
     </Grid>
 </Page>
