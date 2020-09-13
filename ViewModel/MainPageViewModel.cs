@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleClock.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -15,6 +16,8 @@ namespace SimpleClock.ViewModel
         private bool isTwelveHourFormat;
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public string SimpleClockAboutText = @"Author: Brandon Eugene Walker" + Environment.NewLine + "Version: 1.0" + Environment.NewLine +  "Copyright© @Brandon Eugene Walker 2020";
 
         public int ClockFontSize
         {
@@ -42,9 +45,15 @@ namespace SimpleClock.ViewModel
             set
             {
                 this.isTwelveHourFormat = value;
+                this.MainPageClock.IsTwelveHourFormat = value;
                 this.UpdateClockFormatSettings(value);
                 this.OnPropertyChanged();
             }
+        }
+
+        public SimpleClockClock MainPageClock
+        {
+            get; set;
         }
 
         public MainPageViewModel(int clockSize, bool isTwelveHourFormat)
@@ -55,6 +64,9 @@ namespace SimpleClock.ViewModel
             }
             this.ClockFontSize = clockSize;
             this.isTwelveHourFormat = isTwelveHourFormat;
+            this.MainPageClock = new SimpleClockClock(this.isTwelveHourFormat);
+            this.MainPageClock.StartClock();
+
         }
 
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -73,6 +85,11 @@ namespace SimpleClock.ViewModel
         {
             Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             localSettings.Values["clockFormat"] = value;
+        }
+
+        public void UpdateClockFormat(bool isTwelveHourFormat)
+        {
+            this.isTwelveHourFormat = isTwelveHourFormat;
         }
     }
 }
