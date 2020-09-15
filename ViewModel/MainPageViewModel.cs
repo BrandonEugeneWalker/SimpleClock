@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 
 namespace SimpleClock.ViewModel
 {
+    /// <summary>
+    /// The view model for the MainPage view. Handles back and forth between the model and the view using binding.
+    /// </summary>
+    /// <remarks>
+    /// Copyright @Burusutazu 2020
+    /// </remarks>
     public class MainPageViewModel : INotifyPropertyChanged
     {
         private int clockFontSize;
@@ -17,7 +23,7 @@ namespace SimpleClock.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string SimpleClockAboutText = @"Author: Brandon Eugene Walker" + Environment.NewLine + "Version: 1.0" + Environment.NewLine +  "Copyright© @Brandon Eugene Walker 2020";
+        public string SimpleClockAboutText = @"Author: Brandon Eugene Walker" + Environment.NewLine + "             (@Burusutazu)" + Environment.NewLine + "Version: 1.0" + Environment.NewLine +  "Copyright© @Burusutazu 2020";
 
         public int ClockFontSize
         {

@@ -20,8 +20,11 @@ using Windows.UI.Xaml.Navigation;
 namespace SimpleClock
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// The main page of the application, contains all of the ui items needed for the program.
     /// </summary>
+    /// <remarks>
+    /// Copyright @Burusutazu 2020
+    /// </remarks>
     public sealed partial class MainPage : Page
     {
 
@@ -59,7 +62,12 @@ namespace SimpleClock
             Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             Object clockFontSettingsValue = localSettings.Values["clockSize"];
             Object clockFormatSettingsValue = localSettings.Values["clockFormat"];
+
             if (clockFontSettingsValue == null)
+            {
+                localSettings.Values["clockSize"] = 120;
+            }
+            else if ((int)clockFontSettingsValue <= 0)
             {
                 localSettings.Values["clockSize"] = 120;
             }
@@ -67,6 +75,7 @@ namespace SimpleClock
             {
                 this.clockSize = (int)clockFontSettingsValue;
             }
+
             if (clockFormatSettingsValue == null)
             {
                 localSettings.Values["clockFormat"] = false;

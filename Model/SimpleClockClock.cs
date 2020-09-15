@@ -8,6 +8,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 
+/// <summary>
+/// A simple clock class that keeps track of elapsed time in order to properly keep information updated for the system.
+/// </summary>
+/// <remarks>
+/// Copyright @Burusutazu 2020
+/// </remarks>
 namespace SimpleClock.Model
 {
     public class SimpleClockClock : INotifyPropertyChanged
