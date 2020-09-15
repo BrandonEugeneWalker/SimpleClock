@@ -8,14 +8,14 @@
 
   <Identity
     Name="16422afd-0493-4713-a40f-86cea3a67582"
-    Publisher="CN=brand"
+    Publisher="CN=Brandon Eugene Walker"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="16422afd-0493-4713-a40f-86cea3a67582" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>SimpleClock</DisplayName>
-    <PublisherDisplayName>brand</PublisherDisplayName>
+    <DisplayName>SuperSimpleClock</DisplayName>
+    <PublisherDisplayName>Brandon Eugene Walker</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -30,20 +30,16 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="SimpleClock.App">
+      EntryPoint="SuperSimpleClock.App">
       <uap:VisualElements
-        DisplayName="SimpleClock"
+        DisplayName="Super Simple Clock"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="SimpleClock"
+        Description="A super simple clock featuring a resizable analog clock and fullscreen support."
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Super Simple Clock" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>
-
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
 </Package>
