@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SimpleClock")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SuperSimpleClock")]
+[assembly: AssemblyDescription("A simple clock with resizing and fullscreen support.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SimpleClock")]
+[assembly: AssemblyProduct("SuperSimpleClock")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -35,6 +35,7 @@ namespace SimpleClock
         public MainPage()
         {
             this.InitializeComponent();
+            this.clockSize = 120;
             this.InitializeClockSettings();
             this.ViewModel = new MainPageViewModel(this.clockSize, this.isTwelveHourFormat);
             

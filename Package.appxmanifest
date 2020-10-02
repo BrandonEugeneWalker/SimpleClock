@@ -7,20 +7,20 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="16422afd-0493-4713-a40f-86cea3a67582"
-    Publisher="CN=Brandon Eugene Walker"
+    Name="17279Burusutazu.SuperSimpleClock"
+    Publisher="CN=A10063B4-95F5-4A6A-9DF3-F7A4D0D247E1"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="16422afd-0493-4713-a40f-86cea3a67582" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="ad14e642-446d-4ee6-9f44-7b6a152463ae" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>SuperSimpleClock</DisplayName>
-    <PublisherDisplayName>Brandon Eugene Walker</PublisherDisplayName>
+    <DisplayName>Super Simple Clock</DisplayName>
+    <PublisherDisplayName>Burusutazu</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.19041.0" MaxVersionTested="10.0.19041.0" />
   </Dependencies>
 
   <Resources>
