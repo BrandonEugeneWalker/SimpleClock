@@ -31,7 +31,7 @@
                     </Flyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
-            <AppBarButton Icon="FullScreen" Click="FullScreenButton_Click" Tapped="FullScreenButton_Click"/>
+            <AppBarButton Icon="FullScreen" Click="FullScreenButton_Click"/>
         </CommandBar>
         <TextBlock x:Name="SimpleClockDisplay" Text="{x:Bind ViewModel.MainPageClock.TimeString, Mode=OneWay}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Height="Auto" Margin="10,10,10,10" FontSize="{x:Bind ViewModel.ClockFontSize, Mode=OneWay}" />
     </Grid>

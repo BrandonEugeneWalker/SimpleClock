@@ -9,7 +9,7 @@
   <Identity
     Name="17279Burusutazu.SuperSimpleClock"
     Publisher="CN=A10063B4-95F5-4A6A-9DF3-F7A4D0D247E1"
-    Version="1.0.0.0" />
+    Version="1.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="ad14e642-446d-4ee6-9f44-7b6a152463ae" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
